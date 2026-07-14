@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="description" content="支援平假名、片假名、自選學習範圍與間隔重複的五十音 Flashcard。" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>五十音 Flashcard</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div><p class="eyebrow">Kana Trainer</p><h1>五十音 Flashcard</h1></div>
+      <button id="settingsBtn" class="ghost" aria-label="開啟設定">設定</button>
+    </header>
+    <section id="loginView" class="panel auth-panel">
+      <h2>開始學習</h2><p>輸入一個學習 ID。此裝置會用它區分不同人的進度，不需要密碼。</p>
+      <label>學習 ID<input id="userIdInput" autocomplete="username" maxlength="40" placeholder="例如 david" /></label>
+      <button id="loginBtn" class="primary">進入</button>
+      <p class="hint">提醒：資料只存在這台瀏覽器。清除瀏覽資料或換裝置前，請先匯出備份。</p>
+    </section>
+    <section id="appView" hidden>
+      <section class="status-row"><div><span class="label">學習者</span><strong id="currentUser"></strong></div><div><span class="label">今日到期</span><strong id="dueCount">0</strong></div><div><span class="label">已學</span><strong id="learnedCount">0</strong></div></section>
+      <section class="mode-tabs" aria-label="字體模式"><button class="tab active" data-script="hiragana">平假名</button><button class="tab" data-script="katakana">片假名</button><button class="tab" data-script="mixed">混合</button></section>
+      <section id="emptyState" class="panel empty" hidden><h2>還沒有選擇卡片</h2><p>先到設定中勾選要學的假名列，例如母音，再逐步加入 K 行、S 行。</p><button id="emptySettingsBtn" class="primary">選擇學習範圍</button></section>
+      <section id="studyPanel" class="study-wrap"><div class="progress-track"><div id="progressBar"></div></div><p id="queueLabel" class="queue-label"></p><button id="card" class="card" aria-live="polite"><span id="cardPrompt" class="kana"></span><span id="cardHint" class="card-hint">點一下顯示答案</span><span id="cardAnswer" class="answer" hidden></span></button><div id="ratingButtons" class="ratings" hidden><button data-rating="again" class="rating again"><span>重來</span><small>&lt; 1 分鐘</small></button><button data-rating="hard" class="rating hard"><span>困難</span><small id="hardInterval"></small></button><button data-rating="good" class="rating good"><span>記得</span><small id="goodInterval"></small></button><button data-rating="easy" class="rating easy"><span>簡單</span><small id="easyInterval"></small></button></div></section>
+    </section>
+  </main>
+  <dialog id="settingsDialog"><form method="dialog" class="dialog-inner"><header class="dialog-head"><div><p class="eyebrow">Learning scope</p><h2>學習設定</h2></div><button value="cancel" class="ghost">關閉</button></header><section><h3>選擇要加入的列</h3><p class="hint">平假名與片假名共用同一個範圍；可隨時增加或取消。</p><div id="rowSelector" class="row-selector"></div></section><section class="settings-grid"><label>每天最多新卡<input id="newLimitInput" type="number" min="1" max="50" value="10" /></label><label>每次最多複習<input id="reviewLimitInput" type="number" min="5" max="200" value="50" /></label></section><section><h3>資料管理</h3><div class="action-row"><button id="exportBtn" type="button">匯出備份</button><label class="file-label">匯入備份<input id="importInput" type="file" accept="application/json" /></label><button id="switchUserBtn" type="button">切換使用者</button><button id="resetBtn" type="button" class="danger-outline">重設目前進度</button></div></section><button id="saveSettingsBtn" value="default" class="primary full">儲存設定</button></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
