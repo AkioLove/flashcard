@@ -1,0 +1,1 @@
+(()=>{const oldPrefix='kana-trainer:v1:',newPrefix='kana-trainer:v2:';for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(!key||!key.startsWith(oldPrefix))continue;const next=newPrefix+key.slice(oldPrefix.length);if(!localStorage.getItem(next))localStorage.setItem(next,localStorage.getItem(key));}})();
