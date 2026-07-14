@@ -1,0 +1,42 @@
+const ROWS=[
+{id:'vowels',label:'母音',cards:[['あ','ア','a'],['い','イ','i'],['う','ウ','u'],['え','エ','e'],['お','オ','o']]},
+{id:'k',label:'K 行',cards:[['か','カ','ka'],['き','キ','ki'],['く','ク','ku'],['け','ケ','ke'],['こ','コ','ko']]},
+{id:'s',label:'S 行',cards:[['さ','サ','sa'],['し','シ','shi'],['す','ス','su'],['せ','セ','se'],['そ','ソ','so']]},
+{id:'t',label:'T 行',cards:[['た','タ','ta'],['ち','チ','chi'],['つ','ツ','tsu'],['て','テ','te'],['と','ト','to']]},
+{id:'n',label:'N 行',cards:[['な','ナ','na'],['に','ニ','ni'],['ぬ','ヌ','nu'],['ね','ネ','ne'],['の','ノ','no']]},
+{id:'h',label:'H 行',cards:[['は','ハ','ha'],['ひ','ヒ','hi'],['ふ','フ','fu'],['へ','ヘ','he'],['ほ','ホ','ho']]},
+{id:'m',label:'M 行',cards:[['ま','マ','ma'],['み','ミ','mi'],['む','ム','mu'],['め','メ','me'],['も','モ','mo']]},
+{id:'y',label:'Y 行',cards:[['や','ヤ','ya'],['ゆ','ユ','yu'],['よ','ヨ','yo']]},
+{id:'r',label:'R 行',cards:[['ら','ラ','ra'],['り','リ','ri'],['る','ル','ru'],['れ','レ','re'],['ろ','ロ','ro']]},
+{id:'w',label:'W／N',cards:[['わ','ワ','wa'],['を','ヲ','wo / o'],['ん','ン','n']]},
+{id:'g',label:'G 行（濁音）',cards:[['が','ガ','ga'],['ぎ','ギ','gi'],['ぐ','グ','gu'],['げ','ゲ','ge'],['ご','ゴ','go']]},
+{id:'z',label:'Z 行（濁音）',cards:[['ざ','ザ','za'],['じ','ジ','ji'],['ず','ズ','zu'],['ぜ','ゼ','ze'],['ぞ','ゾ','zo']]},
+{id:'d',label:'D 行（濁音）',cards:[['だ','ダ','da'],['ぢ','ヂ','ji'],['づ','ヅ','zu'],['で','デ','de'],['ど','ド','do']]},
+{id:'b',label:'B 行（濁音）',cards:[['ば','バ','ba'],['び','ビ','bi'],['ぶ','ブ','bu'],['べ','ベ','be'],['ぼ','ボ','bo']]},
+{id:'p',label:'P 行（半濁音）',cards:[['ぱ','パ','pa'],['ぴ','ピ','pi'],['ぷ','プ','pu'],['ぺ','ペ','pe'],['ぽ','ポ','po']]}
+];
+const $=s=>document.querySelector(s),PREFIX='kana-trainer:v1:';let userId=localStorage.getItem('kana-trainer:last-user')||'',state=null,queue=[],current=null,revealed=false,completed=0;
+const defaultState=()=>({script:'hiragana',selectedRows:['vowels'],newLimit:10,reviewLimit:50,cards:{},createdAt:Date.now()});
+const storageKey=()=>PREFIX+userId.toLowerCase();
+function load(){try{return JSON.parse(localStorage.getItem(storageKey()))||defaultState()}catch{return defaultState()}}
+function save(){localStorage.setItem(storageKey(),JSON.stringify(state));localStorage.setItem('kana-trainer:last-user',userId)}
+function allCards(){return ROWS.filter(r=>state.selectedRows.includes(r.id)).flatMap(r=>r.cards.map((c,i)=>({id:`${r.id}-${i}`,h:c[0],k:c[1],r:c[2]})))}
+function cardState(id){return state.cards[id]||{reps:0,ease:2.5,interval:0,due:0,lapses:0,last:0}}
+function formatInterval(days){if(days<1/1440)return '< 1 分';if(days<1)return `${Math.max(1,Math.round(days*24))} 小時`;if(days<30)return `${Math.round(days)} 天`;return `${Math.round(days/30)} 月`}
+function nextIntervals(cs){return{hard:Math.max(1/24,cs.interval?cs.interval*1.2:1/24),good:cs.reps===0?1:Math.max(1,cs.interval*cs.ease),easy:cs.reps===0?4:Math.max(4,cs.interval*(cs.ease+.3))}}
+function updateStats(){const cards=allCards(),now=Date.now();$('#dueCount').textContent=cards.filter(c=>{const s=cardState(c.id);return s.reps>0&&s.due<=now}).length;$('#learnedCount').textContent=cards.filter(c=>cardState(c.id).reps>0).length}
+function buildQueue(){const now=Date.now(),cards=allCards();const due=cards.filter(c=>{const s=cardState(c.id);return s.reps>0&&s.due<=now}).sort((a,b)=>cardState(a.id).due-cardState(b.id).due).slice(0,state.reviewLimit);const fresh=cards.filter(c=>cardState(c.id).reps===0).sort(()=>Math.random()-.5).slice(0,state.newLimit);queue=[...due,...fresh];completed=0;updateStats();nextCard()}
+function renderPrompt(c){if(state.script==='hiragana')return c.h;if(state.script==='katakana')return c.k;return Math.random()<.5?c.h:c.k}
+function nextCard(){revealed=false;current=queue.shift()||null;$('#ratingButtons').hidden=true;$('#cardAnswer').hidden=true;$('#cardHint').hidden=false;const hasCards=allCards().length>0;$('#emptyState').hidden=hasCards;$('#studyPanel').hidden=!hasCards;if(!hasCards)return;if(!current){$('#cardPrompt').textContent='完成！';$('#cardHint').textContent='今天的卡片都複習完了';$('#queueLabel').textContent='做得很好';$('#progressBar').style.width='100%';return}$('#cardPrompt').textContent=renderPrompt(current);$('#cardHint').textContent='點一下顯示答案';const total=completed+queue.length+1;$('#queueLabel').textContent=`剩下 ${queue.length+1} 張`;$('#progressBar').style.width=`${total?completed/total*100:0}%`;const ints=nextIntervals(cardState(current.id));$('#hardInterval').textContent=formatInterval(ints.hard);$('#goodInterval').textContent=formatInterval(ints.good);$('#easyInterval').textContent=formatInterval(ints.easy)}
+function reveal(){if(!current||revealed)return;revealed=true;$('#cardAnswer').textContent=current.r;$('#cardAnswer').hidden=false;$('#cardHint').hidden=true;$('#ratingButtons').hidden=false}
+function rate(rating){if(!current)return;const now=Date.now(),cs=cardState(current.id),ints=nextIntervals(cs);if(rating==='again'){cs.reps=0;cs.interval=0;cs.due=now+60000;cs.lapses++;cs.ease=Math.max(1.3,cs.ease-.2);queue.splice(Math.min(3,queue.length),0,current)}else{cs.reps++;cs.interval=ints[rating];cs.due=now+cs.interval*86400000;cs.last=now;if(rating==='hard')cs.ease=Math.max(1.3,cs.ease-.15);if(rating==='easy')cs.ease+=.15}state.cards[current.id]=cs;save();completed++;updateStats();nextCard()}
+function renderSettings(){$('#rowSelector').innerHTML=ROWS.map(r=>`<label class="row-chip"><input type="checkbox" value="${r.id}" ${state.selectedRows.includes(r.id)?'checked':''}><span>${r.label}<br><small>${r.cards.map(c=>c[0]).join(' ')}</small></span></label>`).join('');$('#newLimitInput').value=state.newLimit;$('#reviewLimitInput').value=state.reviewLimit}
+function setScript(script){state.script=script;save();document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.script===script));buildQueue()}
+function enter(id){userId=id.trim();if(!userId)return;state=load();$('#loginView').hidden=true;$('#appView').hidden=false;$('#currentUser').textContent=userId;renderSettings();setScript(state.script)}
+function switchUser(){save();userId='';state=null;localStorage.removeItem('kana-trainer:last-user');$('#appView').hidden=true;$('#loginView').hidden=false;$('#userIdInput').value='';$('#settingsDialog').close()}
+$('#loginBtn').onclick=()=>enter($('#userIdInput').value);$('#userIdInput').addEventListener('keydown',e=>{if(e.key==='Enter')enter(e.target.value)});$('#card').onclick=reveal;document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>rate(b.dataset.rating));document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>setScript(b.dataset.script));function openSettings(){renderSettings();$('#settingsDialog').showModal()}$('#settingsBtn').onclick=openSettings;$('#emptySettingsBtn').onclick=openSettings;
+$('#saveSettingsBtn').onclick=e=>{e.preventDefault();state.selectedRows=[...document.querySelectorAll('#rowSelector input:checked')].map(i=>i.value);state.newLimit=Math.max(1,Math.min(50,+$('#newLimitInput').value||10));state.reviewLimit=Math.max(5,Math.min(200,+$('#reviewLimitInput').value||50));save();$('#settingsDialog').close();buildQueue()};
+$('#switchUserBtn').onclick=switchUser;$('#resetBtn').onclick=()=>{if(confirm(`確定要清除 ${userId} 的所有學習進度嗎？`)){state=defaultState();save();renderSettings();buildQueue()}};
+$('#exportBtn').onclick=()=>{const blob=new Blob([JSON.stringify({version:1,userId,state,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`kana-${userId}-${new Date().toISOString().slice(0,10)}.json`;a.click();URL.revokeObjectURL(a.href)};
+$('#importInput').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const data=JSON.parse(await file.text());if(!data.state||!Array.isArray(data.state.selectedRows))throw new Error();state=data.state;save();renderSettings();buildQueue();alert('匯入完成')}catch{alert('備份檔格式不正確')}finally{e.target.value=''}};
+if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js');if(userId){$('#userIdInput').value=userId;enter(userId)}
