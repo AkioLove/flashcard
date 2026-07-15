@@ -1,4 +1,12 @@
 function escapeMnemonicHtml(value){return String(value||'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
+function highlightSampleWord(sample){
+  const word=String(sample?.word||'');
+  const target=String(sample?.targetKana||'');
+  if(!target)return escapeMnemonicHtml(word);
+  const index=word.indexOf(target);
+  if(index<0)return escapeMnemonicHtml(word);
+  return `${escapeMnemonicHtml(word.slice(0,index))}<mark>${escapeMnemonicHtml(target)}</mark>${escapeMnemonicHtml(word.slice(index+target.length))}`;
+}
 function revealWithMnemonic(){
   if(!current||revealed)return;
   revealed=true;
@@ -13,7 +21,8 @@ function revealWithMnemonic(){
   const stats=cs.seen?`正確率 ${Math.round(cs.correct/cs.seen*100)}% · 忘記 ${cs.lapses} 次`:'新卡';
   const confusable=(data.confusableKana||[]).map(escapeMnemonicHtml).join('、');
   const sample=data.sampleWord;
-  const sampleBlock=sample?`<div class="memory-note sample"><span>📝 範例單字</span><p><strong>${escapeMnemonicHtml(sample.word)}</strong>（${escapeMnemonicHtml(sample.reading)}）— ${escapeMnemonicHtml(sample.meaning)}</p></div>`:'';
+  const sampleLabel=sample?.isSentence?'📝 範例句子':'📝 範例單字';
+  const sampleBlock=sample?`<div class="memory-note sample"><span>${sampleLabel}</span><p><strong>${highlightSampleWord(sample)}</strong>（${escapeMnemonicHtml(sample.reading)}）— ${escapeMnemonicHtml(sample.meaning)}</p></div>`:'';
   $('#cardAnswer').innerHTML=`
     <div class="answer-head"><strong>${escapeMnemonicHtml(current.r)}</strong><small>${scriptLabel} · ${stats}</small></div>
     <div class="memory-note shape"><span>💡 外型聯想</span><p>${escapeMnemonicHtml(shape||'觀察筆畫的方向與轉折，並把它和發音一起記住。')}</p></div>
