@@ -6,15 +6,20 @@ function revealWithMnemonic(){
   const data=KANA_MNEMONICS[current.id]||{};
   const shown=$('#cardPrompt').textContent;
   const isKatakana=shown===current.k;
-  const shape=isKatakana?data.k:data.h;
+  const script=isKatakana?'katakana':'hiragana';
   const scriptLabel=isKatakana?'片假名':'平假名';
+  const shape=data.shapeMnemonic?.[script];
+  const origin=data.kanjiOrigin?.[script]||'—';
   const stats=cs.seen?`正確率 ${Math.round(cs.correct/cs.seen*100)}% · 忘記 ${cs.lapses} 次`:'新卡';
-  const confuse=data.confuse?`<div class="memory-note confuse"><span>⚠️ 易混淆</span><p>${escapeMnemonicHtml(data.confuse)}</p></div>`:'';
+  const confusable=(data.confusableKana||[]).map(escapeMnemonicHtml).join('、');
+  const sample=data.sampleWord;
+  const sampleBlock=sample?`<div class="memory-note sample"><span>📝 範例單字</span><p><strong>${escapeMnemonicHtml(sample.word)}</strong>（${escapeMnemonicHtml(sample.reading)}）— ${escapeMnemonicHtml(sample.meaning)}</p></div>`:'';
   $('#cardAnswer').innerHTML=`
     <div class="answer-head"><strong>${escapeMnemonicHtml(current.r)}</strong><small>${scriptLabel} · ${stats}</small></div>
     <div class="memory-note shape"><span>💡 外型聯想</span><p>${escapeMnemonicHtml(shape||'觀察筆畫的方向與轉折，並把它和發音一起記住。')}</p></div>
-    <div class="memory-note origin"><span>📜 字源</span><p>源自漢字「${escapeMnemonicHtml(data.origin||'—')}」的簡化或草寫。</p></div>
-    ${confuse}`;
+    <div class="memory-note origin"><span>📜 字源</span><p>源自漢字「${escapeMnemonicHtml(origin)}」的簡化或草寫。</p></div>
+    <div class="memory-note confuse"><span>⚠️ 易混淆</span><p>${confusable||'目前沒有特別容易混淆的假名。'}</p></div>
+    ${sampleBlock}`;
   $('#cardAnswer').hidden=false;
   $('#cardHint').hidden=true;
   $('#ratingButtons').hidden=false;
