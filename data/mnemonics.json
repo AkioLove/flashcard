@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "rows": [
+    {
+      "id": "vowels",
+      "label": "母音",
+      "cards": [
+        {
+          "hiragana": "あ",
+          "katakana": "ア",
+          "romaji": "a",
+          "shapeMnemonic": {
+            "hiragana": "像有人張大嘴驚呼『啊！』，中央大圈就是張開的嘴。",
+            "katakana": "像大寫 A 少了一邊；看到 A，就想到 a。"
+          },
+          "kanjiOrigin": {"hiragana": "安", "katakana": "阿"},
+          "confusableKana": ["お", "め"],
+          "sampleWord": {"word": "あさ", "reading": "asa", "meaning": "早上"}
+        },
+        {
+          "hiragana": "い",
+          "katakana": "イ",
+          "romaji": "i",
+          "shapeMnemonic": {
+            "hiragana": "兩筆像兩條並排的鰻魚，喊『咿』地一起游。",
+            "katakana": "兩根直直的針，像兩個英文字母 i。"
+          },
+          "kanjiOrigin": {"hiragana": "以", "katakana": "伊"},
+          "confusableKana": ["り"],
+          "sampleWord": {"word": "いぬ", "reading": "inu", "meaning": "狗"}
+        },
+        {
+          "hiragana": "う",
+          "katakana": "ウ",
+          "romaji": "u",
+          "shapeMnemonic": {
+            "hiragana": "像一個人彎腰捂著肚子發出『嗚』。",
+            "katakana": "像屋頂的一角；『屋』的開頭提醒 u。"
+          },
+          "kanjiOrigin": {"hiragana": "宇", "katakana": "宇"},
+          "confusableKana": ["つ", "ラ"],
+          "sampleWord": {"word": "うみ", "reading": "umi", "meaning": "海"}
+        },
+        {
+          "hiragana": "え",
+          "katakana": "エ",
+          "romaji": "e",
+          "shapeMnemonic": {
+            "hiragana": "像一個人轉頭問『欸？』，下面的彎鉤像疑問尾音。",
+            "katakana": "像工字的一部分，轉折處像有人說『欸？』停住。"
+          },
+          "kanjiOrigin": {"hiragana": "衣", "katakana": "江"},
+          "confusableKana": ["ん"],
+          "sampleWord": {"word": "えき", "reading": "eki", "meaning": "車站"}
+        },
+        {
+          "hiragana": "お",
+          "katakana": "オ",
+          "romaji": "o",
+          "shapeMnemonic": {
+            "hiragana": "像一個人戴帽子繞一圈說『喔！』。",
+            "katakana": "像人在十字路口驚呼『喔』。"
+          },
+          "kanjiOrigin": {"hiragana": "於", "katakana": "於"},
+          "confusableKana": ["あ"],
+          "sampleWord": {"word": "おと", "reading": "oto", "meaning": "聲音"}
+        }
+      ]
+    },
+    {
+      "id": "k",
+      "label": "K 行",
+      "cards": [
+        {
+          "hiragana": "か",
+          "katakana": "カ",
+          "romaji": "ka",
+          "shapeMnemonic": {
+            "hiragana": "左邊像『力』，右邊像被用力『卡』住的小東西。",
+            "katakana": "像把刀『卡』進木頭裡，直線與斜刀交叉。"
+          },
+          "kanjiOrigin": {"hiragana": "加", "katakana": "加"},
+          "confusableKana": ["け", "や"],
+          "sampleWord": {"word": "かさ", "reading": "kasa", "meaning": "雨傘"}
+        },
+        {
+          "hiragana": "き",
+          "katakana": "キ",
+          "romaji": "ki",
+          "shapeMnemonic": {
+            "hiragana": "多條橫齒像一把 key（鑰匙）；key → ki。",
+            "katakana": "本身就像一把有齒的 key。"
+          },
+          "kanjiOrigin": {"hiragana": "幾", "katakana": "幾"},
+          "confusableKana": ["さ"],
+          "sampleWord": {"word": "きく", "reading": "kiku", "meaning": "聽；問"}
+        },
+        {
+          "hiragana": "く",
+          "katakana": "ク",
+          "romaji": "ku",
+          "shapeMnemonic": {
+            "hiragana": "像張開的鳥嘴『咕、咕』叫；咕 → ku。",
+            "katakana": "像尖尖的鳥喙，也像小於符號。"
+          },
+          "kanjiOrigin": {"hiragana": "久", "katakana": "久"},
+          "confusableKana": ["へ", "ワ"],
+          "sampleWord": {"word": "くも", "reading": "kumo", "meaning": "雲；蜘蛛"}
+        },
+        {
+          "hiragana": "け",
+          "katakana": "ケ",
+          "romaji": "ke",
+          "shapeMnemonic": {
+            "hiragana": "右邊像沒寫完的 K；看到 K 就想到 ke。",
+            "katakana": "像竹竿旁伸出一根 K 的手臂。"
+          },
+          "kanjiOrigin": {"hiragana": "計", "katakana": "介"},
+          "confusableKana": ["か", "は"],
+          "sampleWord": {"word": "けさ", "reading": "kesa", "meaning": "今天早上"}
+        },
+        {
+          "hiragana": "こ",
+          "katakana": "コ",
+          "romaji": "ko",
+          "shapeMnemonic": {
+            "hiragana": "兩片平行的 cookie；cookie 開頭 co → ko。",
+            "katakana": "像方形盒子的兩邊，裡面裝著 cookie。"
+          },
+          "kanjiOrigin": {"hiragana": "己", "katakana": "己"},
+          "confusableKana": ["二", "ユ"],
+          "sampleWord": {"word": "こえ", "reading": "koe", "meaning": "聲音；嗓音"}
+        }
+      ]
+    },
+    {
+      "id": "s",
+      "label": "S 行",
+      "cards": [
+        {
+          "hiragana": "さ",
+          "katakana": "サ",
+          "romaji": "sa",
+          "shapeMnemonic": {
+            "hiragana": "像一條魚被魚鉤『撒』住，尾巴繞一圈。",
+            "katakana": "像三條曬乾的魚排，sa 像『曬』。"
+          },
+          "kanjiOrigin": {"hiragana": "左", "katakana": "散"},
+          "confusableKana": ["き", "ち"],
+          "sampleWord": {"word": "さかな", "reading": "sakana", "meaning": "魚"}
+        },
+        {
+          "hiragana": "し",
+          "katakana": "シ",
+          "romaji": "shi",
+          "shapeMnemonic": {
+            "hiragana": "像一根吸管彎進杯子『吸』；吸 → shi。",
+            "katakana": "三滴水向左射出；水勢 shi。"
+          },
+          "kanjiOrigin": {"hiragana": "之", "katakana": "之"},
+          "confusableKana": ["つ", "ツ"],
+          "sampleWord": {"word": "しお", "reading": "shio", "meaning": "鹽"}
+        },
+        {
+          "hiragana": "す",
+          "katakana": "ス",
+          "romaji": "su",
+          "shapeMnemonic": {
+            "hiragana": "像盤好的『絲』線，尾端打了一個圈；絲 → su。",
+            "katakana": "像一把斜放的勺子舀湯，發出 su。"
+          },
+          "kanjiOrigin": {"hiragana": "寸", "katakana": "須"},
+          "confusableKana": ["む"],
+          "sampleWord": {"word": "すし", "reading": "sushi", "meaning": "壽司"}
+        },
+        {
+          "hiragana": "せ",
+          "katakana": "セ",
+          "romaji": "se",
+          "shapeMnemonic": {
+            "hiragana": "像世界（せかい）的十字路口，線條互相穿過。",
+            "katakana": "像坐著的人伸手說『請坐』；坐 → se。"
+          },
+          "kanjiOrigin": {"hiragana": "世", "katakana": "世"},
+          "confusableKana": ["け"],
+          "sampleWord": {"word": "せかい", "reading": "sekai", "meaning": "世界"}
+        },
+        {
+          "hiragana": "そ",
+          "katakana": "ソ",
+          "romaji": "so",
+          "shapeMnemonic": {
+            "hiragana": "像縫線把布『搜』成一圈，尾巴往下。",
+            "katakana": "像縫衣針斜穿一條線；英文 sew 提醒 so。"
+          },
+          "kanjiOrigin": {"hiragana": "曾", "katakana": "曾"},
+          "confusableKana": ["ん", "ン"],
+          "sampleWord": {"word": "そら", "reading": "sora", "meaning": "天空"}
+        }
+      ]
+    }
+  ]
+}
