@@ -25,3 +25,17 @@ function revealWithMnemonic(){
   $('#ratingButtons').hidden=false;
 }
 $('#card').onclick=revealWithMnemonic;
+
+KANA_DATA_PROMISE.then(data=>{
+  if(!data?.rows?.length)return;
+  data.rows.forEach(row=>{
+    const index=ROWS.findIndex(existing=>existing.id===row.id);
+    if(index>=0)ROWS.splice(index,1,row);
+    else ROWS.push(row);
+  });
+  // IDs stay row-id + index, so existing SM-2 progress remains compatible.
+  if(state){
+    renderSettings();
+    buildQueue();
+  }
+});
