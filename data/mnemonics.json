@@ -1,90 +1,90 @@
 {
-  "version": 2,
+  "version": 3,
   "rows": [
     {
       "id": "vowels",
       "label": "母音",
       "cards": [
-        {"hiragana":"あ","katakana":"ア","romaji":"a","shapeMnemonic":{"hiragana":"像有人張大嘴驚呼『啊！』，中央大圈就是張開的嘴。","katakana":"像大寫 A 少了一邊；看到 A，就想到 a。"},"kanjiOrigin":{"hiragana":"安","katakana":"阿"},"confusableKana":["お","め"],"sampleWord":{"word":"あさ","reading":"asa","meaning":"早上"}},
+        {"hiragana":"あ","katakana":"ア","romaji":"a","shapeMnemonic":{"hiragana":"像有人張大嘴驚呼『啊！』，中央大圈就是張開的嘴。","katakana":"像大寫 A 少了一邊；看到 A，就想到 a。"},"kanjiOrigin":{"hiragana":"安","katakana":"阿"},"confusableKana":["お","め"],"sampleWord":{"word":"アニメ","reading":"anime","meaning":"動畫"}},
         {"hiragana":"い","katakana":"イ","romaji":"i","shapeMnemonic":{"hiragana":"兩筆像兩條並排的鰻魚，喊『咿』地一起游。","katakana":"兩根直直的針，像兩個英文字母 i。"},"kanjiOrigin":{"hiragana":"以","katakana":"伊"},"confusableKana":["り"],"sampleWord":{"word":"いぬ","reading":"inu","meaning":"狗"}},
-        {"hiragana":"う","katakana":"ウ","romaji":"u","shapeMnemonic":{"hiragana":"像一個人彎腰捂著肚子發出『嗚』。","katakana":"像屋頂的一角；『屋』的開頭提醒 u。"},"kanjiOrigin":{"hiragana":"宇","katakana":"宇"},"confusableKana":["つ","ラ"],"sampleWord":{"word":"うみ","reading":"umi","meaning":"海"}},
+        {"hiragana":"う","katakana":"ウ","romaji":"u","shapeMnemonic":{"hiragana":"像一個人彎腰捂著肚子發出『嗚』。","katakana":"像屋頂的一角；『屋』的開頭提醒 u。"},"kanjiOrigin":{"hiragana":"宇","katakana":"宇"},"confusableKana":["つ","ラ"],"sampleWord":{"word":"うどん","reading":"udon","meaning":"烏龍麵"}},
         {"hiragana":"え","katakana":"エ","romaji":"e","shapeMnemonic":{"hiragana":"像一個人轉頭問『欸？』，下面的彎鉤像疑問尾音。","katakana":"像工字的一部分，轉折處像有人說『欸？』停住。"},"kanjiOrigin":{"hiragana":"衣","katakana":"江"},"confusableKana":["ん"],"sampleWord":{"word":"えき","reading":"eki","meaning":"車站"}},
-        {"hiragana":"お","katakana":"オ","romaji":"o","shapeMnemonic":{"hiragana":"像一個人戴帽子繞一圈說『喔！』。","katakana":"像人在十字路口驚呼『喔』。"},"kanjiOrigin":{"hiragana":"於","katakana":"於"},"confusableKana":["あ"],"sampleWord":{"word":"おと","reading":"oto","meaning":"聲音"}}
+        {"hiragana":"お","katakana":"オ","romaji":"o","shapeMnemonic":{"hiragana":"像一個人戴帽子繞一圈說『喔！』。","katakana":"像人在十字路口驚呼『喔』。"},"kanjiOrigin":{"hiragana":"於","katakana":"於"},"confusableKana":["あ"],"sampleWord":{"word":"おちゃ","reading":"ocha","meaning":"茶"}}
       ]
     },
     {
       "id":"k","label":"K 行","cards":[
         {"hiragana":"か","katakana":"カ","romaji":"ka","shapeMnemonic":{"hiragana":"左邊像『力』，右邊像被用力『卡』住的小東西。","katakana":"像把刀『卡』進木頭裡，直線與斜刀交叉。"},"kanjiOrigin":{"hiragana":"加","katakana":"加"},"confusableKana":["け","や"],"sampleWord":{"word":"かさ","reading":"kasa","meaning":"雨傘"}},
-        {"hiragana":"き","katakana":"キ","romaji":"ki","shapeMnemonic":{"hiragana":"多條橫齒像一把 key（鑰匙）；key → ki。","katakana":"本身就像一把有齒的 key。"},"kanjiOrigin":{"hiragana":"幾","katakana":"幾"},"confusableKana":["さ"],"sampleWord":{"word":"きく","reading":"kiku","meaning":"聽；問"}},
-        {"hiragana":"く","katakana":"ク","romaji":"ku","shapeMnemonic":{"hiragana":"像張開的鳥嘴『咕、咕』叫；咕 → ku。","katakana":"像尖尖的鳥喙，也像小於符號。"},"kanjiOrigin":{"hiragana":"久","katakana":"久"},"confusableKana":["へ","ワ"],"sampleWord":{"word":"くも","reading":"kumo","meaning":"雲；蜘蛛"}},
-        {"hiragana":"け","katakana":"ケ","romaji":"ke","shapeMnemonic":{"hiragana":"右邊像沒寫完的 K；看到 K 就想到 ke。","katakana":"像竹竿旁伸出一根 K 的手臂。"},"kanjiOrigin":{"hiragana":"計","katakana":"介"},"confusableKana":["か","は"],"sampleWord":{"word":"けさ","reading":"kesa","meaning":"今天早上"}},
-        {"hiragana":"こ","katakana":"コ","romaji":"ko","shapeMnemonic":{"hiragana":"兩片平行的 cookie；cookie 開頭 co → ko。","katakana":"像方形盒子的兩邊，裡面裝著 cookie。"},"kanjiOrigin":{"hiragana":"己","katakana":"己"},"confusableKana":["二","ユ"],"sampleWord":{"word":"こえ","reading":"koe","meaning":"聲音；嗓音"}}
+        {"hiragana":"き","katakana":"キ","romaji":"ki","shapeMnemonic":{"hiragana":"多條橫齒像一把 key（鑰匙）；key → ki。","katakana":"本身就像一把有齒的 key。"},"kanjiOrigin":{"hiragana":"幾","katakana":"幾"},"confusableKana":["さ"],"sampleWord":{"word":"きっぷ","reading":"kippu","meaning":"車票"}},
+        {"hiragana":"く","katakana":"ク","romaji":"ku","shapeMnemonic":{"hiragana":"像張開的鳥嘴『咕、咕』叫；咕 → ku。","katakana":"像尖尖的鳥喙，也像小於符號。"},"kanjiOrigin":{"hiragana":"久","katakana":"久"},"confusableKana":["へ","ワ"],"sampleWord":{"word":"くるま","reading":"kuruma","meaning":"汽車"}},
+        {"hiragana":"け","katakana":"ケ","romaji":"ke","shapeMnemonic":{"hiragana":"右邊像沒寫完的 K；看到 K 就想到 ke。","katakana":"像竹竿旁伸出一根 K 的手臂。"},"kanjiOrigin":{"hiragana":"計","katakana":"介"},"confusableKana":["か","は"],"sampleWord":{"word":"ケーキ","reading":"keeki","meaning":"蛋糕"}},
+        {"hiragana":"こ","katakana":"コ","romaji":"ko","shapeMnemonic":{"hiragana":"兩片平行的 cookie；cookie 開頭 co → ko。","katakana":"像方形盒子的兩邊，裡面裝著 cookie。"},"kanjiOrigin":{"hiragana":"己","katakana":"己"},"confusableKana":["二","ユ"],"sampleWord":{"word":"コーヒー","reading":"koohii","meaning":"咖啡"}}
       ]
     },
     {
       "id":"s","label":"S 行","cards":[
-        {"hiragana":"さ","katakana":"サ","romaji":"sa","shapeMnemonic":{"hiragana":"像一條魚被魚鉤『撒』住，尾巴繞一圈。","katakana":"像三條曬乾的魚排，sa 像『曬』。"},"kanjiOrigin":{"hiragana":"左","katakana":"散"},"confusableKana":["き","ち"],"sampleWord":{"word":"さかな","reading":"sakana","meaning":"魚"}},
-        {"hiragana":"し","katakana":"シ","romaji":"shi","shapeMnemonic":{"hiragana":"像一根吸管彎進杯子『吸』；吸 → shi。","katakana":"三滴水向左射出；短筆較平，方向朝右上。"},"kanjiOrigin":{"hiragana":"之","katakana":"之"},"confusableKana":["つ","ツ"],"sampleWord":{"word":"しお","reading":"shio","meaning":"鹽"}},
+        {"hiragana":"さ","katakana":"サ","romaji":"sa","shapeMnemonic":{"hiragana":"像一條魚被魚鉤『撒』住，尾巴繞一圈。","katakana":"像三條曬乾的魚排，sa 像『曬』。"},"kanjiOrigin":{"hiragana":"左","katakana":"散"},"confusableKana":["き","ち"],"sampleWord":{"word":"さくら","reading":"sakura","meaning":"櫻花"}},
+        {"hiragana":"し","katakana":"シ","romaji":"shi","shapeMnemonic":{"hiragana":"像一根吸管彎進杯子『吸』；吸 → shi。","katakana":"三滴水向左射出；短筆較平，方向朝右上。"},"kanjiOrigin":{"hiragana":"之","katakana":"之"},"confusableKana":["つ","ツ"],"sampleWord":{"word":"しんかんせん","reading":"shinkansen","meaning":"新幹線"}},
         {"hiragana":"す","katakana":"ス","romaji":"su","shapeMnemonic":{"hiragana":"像盤好的『絲』線，尾端打了一個圈；絲 → su。","katakana":"像一把斜放的勺子舀湯，發出 su。"},"kanjiOrigin":{"hiragana":"寸","katakana":"須"},"confusableKana":["む"],"sampleWord":{"word":"すし","reading":"sushi","meaning":"壽司"}},
         {"hiragana":"せ","katakana":"セ","romaji":"se","shapeMnemonic":{"hiragana":"像世界（せかい）的十字路口，線條互相穿過。","katakana":"像坐著的人伸手說『請坐』；坐 → se。"},"kanjiOrigin":{"hiragana":"世","katakana":"世"},"confusableKana":["け"],"sampleWord":{"word":"せかい","reading":"sekai","meaning":"世界"}},
-        {"hiragana":"そ","katakana":"ソ","romaji":"so","shapeMnemonic":{"hiragana":"像縫線把布『搜』成一圈，尾巴往下。","katakana":"像縫衣針斜穿一條線；英文 sew 提醒 so。"},"kanjiOrigin":{"hiragana":"曾","katakana":"曾"},"confusableKana":["ん","ン"],"sampleWord":{"word":"そら","reading":"sora","meaning":"天空"}}
+        {"hiragana":"そ","katakana":"ソ","romaji":"so","shapeMnemonic":{"hiragana":"像縫線把布『搜』成一圈，尾巴往下。","katakana":"像縫衣針斜穿一條線；英文 sew 提醒 so。"},"kanjiOrigin":{"hiragana":"曾","katakana":"曾"},"confusableKana":["ん","ン"],"sampleWord":{"word":"ソフトクリーム","reading":"sofuto kuriimu","meaning":"霜淇淋"}}
       ]
     },
     {
       "id":"t","label":"T 行","cards":[
-        {"hiragana":"た","katakana":"タ","romaji":"ta","shapeMnemonic":{"hiragana":"像字母 t 旁拖著長尾巴；看到 t 就想到 ta。","katakana":"像一把直立的刀旁有短柄，『刀』提醒 ta。"},"kanjiOrigin":{"hiragana":"太","katakana":"多"},"confusableKana":["な"],"sampleWord":{"word":"たこ","reading":"tako","meaning":"章魚；風箏"}},
-        {"hiragana":"ち","katakana":"チ","romaji":"chi","shapeMnemonic":{"hiragana":"像數字 5 戴著帽子，下方大彎鉤是最明顯特徵。","katakana":"像『千』切下一角；千的音感提醒 chi。"},"kanjiOrigin":{"hiragana":"知","katakana":"千"},"confusableKana":["さ","ら"],"sampleWord":{"word":"ちず","reading":"chizu","meaning":"地圖"}},
-        {"hiragana":"つ","katakana":"ツ","romaji":"tsu","shapeMnemonic":{"hiragana":"像海浪捲成一個大津波；tsunami → tsu。","katakana":"三滴水由上往下落，短筆較直。"},"kanjiOrigin":{"hiragana":"川","katakana":"川"},"confusableKana":["し","シ"],"sampleWord":{"word":"つき","reading":"tsuki","meaning":"月亮"}},
-        {"hiragana":"て","katakana":"テ","romaji":"te","shapeMnemonic":{"hiragana":"像一隻攤開的手，手（te）掌向下。","katakana":"像字母 T 多一橫，T-e → te。"},"kanjiOrigin":{"hiragana":"天","katakana":"天"},"confusableKana":["と"],"sampleWord":{"word":"て","reading":"te","meaning":"手"}},
-        {"hiragana":"と","katakana":"ト","romaji":"to","shapeMnemonic":{"hiragana":"左上小點像腳趾，下面彎鉤像 toe；toe → to。","katakana":"像一根圖釘釘在牆上，『釘』提醒 to。"},"kanjiOrigin":{"hiragana":"止","katakana":"止"},"confusableKana":["て"],"sampleWord":{"word":"とり","reading":"tori","meaning":"鳥"}}
+        {"hiragana":"た","katakana":"タ","romaji":"ta","shapeMnemonic":{"hiragana":"像字母 t 旁拖著長尾巴；看到 t 就想到 ta。","katakana":"像一把直立的刀旁有短柄，『刀』提醒 ta。"},"kanjiOrigin":{"hiragana":"太","katakana":"多"},"confusableKana":["な"],"sampleWord":{"word":"タクシー","reading":"takushii","meaning":"計程車"}},
+        {"hiragana":"ち","katakana":"チ","romaji":"chi","shapeMnemonic":{"hiragana":"像數字 5 戴著帽子，下方大彎鉤是最明顯特徵。","katakana":"像『千』切下一角；千的音感提醒 chi。"},"kanjiOrigin":{"hiragana":"知","katakana":"千"},"confusableKana":["さ","ら"],"sampleWord":{"word":"チーズ","reading":"chiizu","meaning":"起司"}},
+        {"hiragana":"つ","katakana":"ツ","romaji":"tsu","shapeMnemonic":{"hiragana":"像海浪捲成一個大津波；tsunami → tsu。","katakana":"三滴水由上往下落，短筆較直。"},"kanjiOrigin":{"hiragana":"川","katakana":"川"},"confusableKana":["し","シ"],"sampleWord":{"word":"ツアー","reading":"tsuaa","meaning":"旅行團；行程"}},
+        {"hiragana":"て","katakana":"テ","romaji":"te","shapeMnemonic":{"hiragana":"像一隻攤開的手，手（te）掌向下。","katakana":"像字母 T 多一橫，T-e → te。"},"kanjiOrigin":{"hiragana":"天","katakana":"天"},"confusableKana":["と"],"sampleWord":{"word":"テレビ","reading":"terebi","meaning":"電視"}},
+        {"hiragana":"と","katakana":"ト","romaji":"to","shapeMnemonic":{"hiragana":"左上小點像腳趾，下面彎鉤像 toe；toe → to。","katakana":"像一根圖釘釘在牆上，『釘』提醒 to。"},"kanjiOrigin":{"hiragana":"止","katakana":"止"},"confusableKana":["て"],"sampleWord":{"word":"トイレ","reading":"toire","meaning":"廁所"}}
       ]
     },
     {
       "id":"n","label":"N 行","cards":[
-        {"hiragana":"な","katakana":"ナ","romaji":"na","shapeMnemonic":{"hiragana":"十字旁綁著繩子，右下打成『那』個圈。","katakana":"像一把斜放的十字刀，切『那』塊。"},"kanjiOrigin":{"hiragana":"奈","katakana":"奈"},"confusableKana":["た"],"sampleWord":{"word":"なつ","reading":"natsu","meaning":"夏天"}},
-        {"hiragana":"に","katakana":"ニ","romaji":"ni","shapeMnemonic":{"hiragana":"兩筆像兩個膝蓋 knee 彎著坐；knee → ni。","katakana":"直接像中文『二』，二 → ni。"},"kanjiOrigin":{"hiragana":"仁","katakana":"二"},"confusableKana":["い"],"sampleWord":{"word":"にく","reading":"niku","meaning":"肉"}},
-        {"hiragana":"ぬ","katakana":"ヌ","romaji":"nu","shapeMnemonic":{"hiragana":"像繩子穿過甜甜圈再打結，右下有完整小圈。","katakana":"像一把彎刀穿過布料打成結。"},"kanjiOrigin":{"hiragana":"奴","katakana":"奴"},"confusableKana":["め"],"sampleWord":{"word":"いぬ","reading":"inu","meaning":"狗"}},
+        {"hiragana":"な","katakana":"ナ","romaji":"na","shapeMnemonic":{"hiragana":"十字旁綁著繩子，右下打成『那』個圈。","katakana":"像一把斜放的十字刀，切『那』塊。"},"kanjiOrigin":{"hiragana":"奈","katakana":"奈"},"confusableKana":["た"],"sampleWord":{"word":"なっとう","reading":"nattou","meaning":"納豆"}},
+        {"hiragana":"に","katakana":"ニ","romaji":"ni","shapeMnemonic":{"hiragana":"兩筆像兩個膝蓋 knee 彎著坐；knee → ni。","katakana":"直接像中文『二』，二 → ni。"},"kanjiOrigin":{"hiragana":"仁","katakana":"二"},"confusableKana":["い"],"sampleWord":{"word":"にほん","reading":"nihon","meaning":"日本"}},
+        {"hiragana":"ぬ","katakana":"ヌ","romaji":"nu","shapeMnemonic":{"hiragana":"像繩子穿過甜甜圈再打結，右下有完整小圈。","katakana":"像一把彎刀穿過布料打成結。"},"kanjiOrigin":{"hiragana":"奴","katakana":"奴"},"confusableKana":["め"],"sampleWord":{"word":"ヌードル","reading":"nuudoru","meaning":"麵；麵食"}},
         {"hiragana":"ね","katakana":"ネ","romaji":"ne","shapeMnemonic":{"hiragana":"像一隻貓抓住線團，右側圈是線球；貓叫『捏～』。","katakana":"像一張交叉的網 net；net → ne。"},"kanjiOrigin":{"hiragana":"祢","katakana":"祢"},"confusableKana":["れ"],"sampleWord":{"word":"ねこ","reading":"neko","meaning":"貓"}},
-        {"hiragana":"の","katakana":"ノ","romaji":"no","shapeMnemonic":{"hiragana":"像禁止符號的一部分，看到它就說 NO。","katakana":"就是乾淨的一撇，像 no 的起筆。"},"kanjiOrigin":{"hiragana":"乃","katakana":"乃"},"confusableKana":["め"],"sampleWord":{"word":"のむ","reading":"nomu","meaning":"喝"}}
+        {"hiragana":"の","katakana":"ノ","romaji":"no","shapeMnemonic":{"hiragana":"像禁止符號的一部分，看到它就說 NO。","katakana":"就是乾淨的一撇，像 no 的起筆。"},"kanjiOrigin":{"hiragana":"乃","katakana":"乃"},"confusableKana":["め"],"sampleWord":{"word":"のり","reading":"nori","meaning":"海苔"}}
       ]
     },
     {
       "id":"h","label":"H 行","cards":[
-        {"hiragana":"は","katakana":"ハ","romaji":"ha","shapeMnemonic":{"hiragana":"像一個人舉手『哈！』，右邊笑出一個圈。","katakana":"兩筆張開像人在哈哈大笑。"},"kanjiOrigin":{"hiragana":"波","katakana":"八"},"confusableKana":["ほ","け"],"sampleWord":{"word":"はな","reading":"hana","meaning":"花；鼻子"}},
-        {"hiragana":"ひ","katakana":"ヒ","romaji":"hi","shapeMnemonic":{"hiragana":"像一張笑臉垂下一滴眼淚，『嘻』一聲。","katakana":"像匕首的形狀；『匕』提醒 hi。"},"kanjiOrigin":{"hiragana":"比","katakana":"比"},"confusableKana":["い"],"sampleWord":{"word":"ひと","reading":"hito","meaning":"人"}},
-        {"hiragana":"ふ","katakana":"フ","romaji":"fu","shapeMnemonic":{"hiragana":"像富士山上吹下一陣風；Fuji → fu。","katakana":"像一面被風吹動的旗幟。"},"kanjiOrigin":{"hiragana":"不","katakana":"不"},"confusableKana":["ワ"],"sampleWord":{"word":"ふね","reading":"fune","meaning":"船"}},
+        {"hiragana":"は","katakana":"ハ","romaji":"ha","shapeMnemonic":{"hiragana":"像一個人舉手『哈！』，右邊笑出一個圈。","katakana":"兩筆張開像人在哈哈大笑。"},"kanjiOrigin":{"hiragana":"波","katakana":"八"},"confusableKana":["ほ","け"],"sampleWord":{"word":"ハンバーガー","reading":"hanbaagaa","meaning":"漢堡"}},
+        {"hiragana":"ひ","katakana":"ヒ","romaji":"hi","shapeMnemonic":{"hiragana":"像一張笑臉垂下一滴眼淚，『嘻』一聲。","katakana":"像匕首的形狀；『匕』提醒 hi。"},"kanjiOrigin":{"hiragana":"比","katakana":"比"},"confusableKana":["い"],"sampleWord":{"word":"ひこうき","reading":"hikouki","meaning":"飛機"}},
+        {"hiragana":"ふ","katakana":"フ","romaji":"fu","shapeMnemonic":{"hiragana":"像富士山上吹下一陣風；Fuji → fu。","katakana":"像一面被風吹動的旗幟。"},"kanjiOrigin":{"hiragana":"不","katakana":"不"},"confusableKana":["ワ"],"sampleWord":{"word":"ふじさん","reading":"fujisan","meaning":"富士山"}},
         {"hiragana":"へ","katakana":"ヘ","romaji":"he","shapeMnemonic":{"hiragana":"像一座尖山，爬山時『嘿』一聲。","katakana":"同樣像山峰或屋頂，頂點較平。"},"kanjiOrigin":{"hiragana":"部","katakana":"部"},"confusableKana":["く"],"sampleWord":{"word":"へや","reading":"heya","meaning":"房間"}},
-        {"hiragana":"ほ","katakana":"ホ","romaji":"ho","shapeMnemonic":{"hiragana":"兩根柱子旁掛著保齡球，右側有兩條橫線。","katakana":"十字架旁掛一塊布，風吹出 ho。"},"kanjiOrigin":{"hiragana":"保","katakana":"保"},"confusableKana":["は"],"sampleWord":{"word":"ほし","reading":"hoshi","meaning":"星星"}}
+        {"hiragana":"ほ","katakana":"ホ","romaji":"ho","shapeMnemonic":{"hiragana":"兩根柱子旁掛著保齡球，右側有兩條橫線。","katakana":"十字架旁掛一塊布，風吹出 ho。"},"kanjiOrigin":{"hiragana":"保","katakana":"保"},"confusableKana":["は"],"sampleWord":{"word":"ホテル","reading":"hoteru","meaning":"飯店"}}
       ]
     },
     {
       "id":"m","label":"M 行","cards":[
-        {"hiragana":"ま","katakana":"マ","romaji":"ma","shapeMnemonic":{"hiragana":"像地圖 map 上的交叉道路，右側繞一圈。","katakana":"像『萬』字的一角；man 的開頭提醒 ma。"},"kanjiOrigin":{"hiragana":"末","katakana":"末"},"confusableKana":["も"],"sampleWord":{"word":"まど","reading":"mado","meaning":"窗戶"}},
-        {"hiragana":"み","katakana":"ミ","romaji":"mi","shapeMnemonic":{"hiragana":"像一條彎曲道路連續轉兩次，走到『迷』路。","katakana":"三道整齊的線，像三粒米；米 → mi。"},"kanjiOrigin":{"hiragana":"美","katakana":"三"},"confusableKana":["し"],"sampleWord":{"word":"みみ","reading":"mimi","meaning":"耳朵"}},
+        {"hiragana":"ま","katakana":"マ","romaji":"ma","shapeMnemonic":{"hiragana":"像地圖 map 上的交叉道路，右側繞一圈。","katakana":"像『萬』字的一角；man 的開頭提醒 ma。"},"kanjiOrigin":{"hiragana":"末","katakana":"末"},"confusableKana":["も"],"sampleWord":{"word":"マンガ","reading":"manga","meaning":"漫畫"}},
+        {"hiragana":"み","katakana":"ミ","romaji":"mi","shapeMnemonic":{"hiragana":"像一條彎曲道路連續轉兩次，走到『迷』路。","katakana":"三道整齊的線，像三粒米；米 → mi。"},"kanjiOrigin":{"hiragana":"美","katakana":"三"},"confusableKana":["し"],"sampleWord":{"word":"ミルク","reading":"miruku","meaning":"牛奶"}},
         {"hiragana":"む","katakana":"ム","romaji":"mu","shapeMnemonic":{"hiragana":"像一頭牛戴著鼻環，牛叫 moo → mu。","katakana":"像三角帳篷裡住著一頭 moo 的牛。"},"kanjiOrigin":{"hiragana":"武","katakana":"牟"},"confusableKana":["す"],"sampleWord":{"word":"むし","reading":"mushi","meaning":"昆蟲"}},
-        {"hiragana":"め","katakana":"メ","romaji":"me","shapeMnemonic":{"hiragana":"像一隻眼睛被線穿過；眼睛『目』提醒 me。","katakana":"像字母 X 戴一撇，兩線相交。"},"kanjiOrigin":{"hiragana":"女","katakana":"女"},"confusableKana":["ぬ","の"],"sampleWord":{"word":"め","reading":"me","meaning":"眼睛"}},
-        {"hiragana":"も","katakana":"モ","romaji":"mo","shapeMnemonic":{"hiragana":"像魚鉤連著兩條魚，橫線比ま多。","katakana":"三條橫木被一豎串起；木的音感提醒 mo。"},"kanjiOrigin":{"hiragana":"毛","katakana":"毛"},"confusableKana":["ま"],"sampleWord":{"word":"もり","reading":"mori","meaning":"森林"}}
+        {"hiragana":"め","katakana":"メ","romaji":"me","shapeMnemonic":{"hiragana":"像一隻眼睛被線穿過；眼睛『目』提醒 me。","katakana":"像字母 X 戴一撇，兩線相交。"},"kanjiOrigin":{"hiragana":"女","katakana":"女"},"confusableKana":["ぬ","の"],"sampleWord":{"word":"メニュー","reading":"menyuu","meaning":"菜單"}},
+        {"hiragana":"も","katakana":"モ","romaji":"mo","shapeMnemonic":{"hiragana":"像魚鉤連著兩條魚，橫線比ま多。","katakana":"三條橫木被一豎串起；木的音感提醒 mo。"},"kanjiOrigin":{"hiragana":"毛","katakana":"毛"},"confusableKana":["ま"],"sampleWord":{"word":"もも","reading":"momo","meaning":"桃子"}}
       ]
     },
     {
       "id":"y","label":"Y 行","cards":[
-        {"hiragana":"や","katakana":"ヤ","romaji":"ya","shapeMnemonic":{"hiragana":"像一艘小遊艇 yacht 揚起帆。","katakana":"像 Y 字分岔的道路；Y → ya。"},"kanjiOrigin":{"hiragana":"也","katakana":"也"},"confusableKana":["か"],"sampleWord":{"word":"やま","reading":"yama","meaning":"山"}},
-        {"hiragana":"ゆ","katakana":"ユ","romaji":"yu","shapeMnemonic":{"hiragana":"像魚被魚鉤悠著拉走，中間有大彎圈。","katakana":"像 U 字旁加一豎；U → yu。"},"kanjiOrigin":{"hiragana":"由","katakana":"由"},"confusableKana":["よ"],"sampleWord":{"word":"ゆき","reading":"yuki","meaning":"雪"}},
-        {"hiragana":"よ","katakana":"ヨ","romaji":"yo","shapeMnemonic":{"hiragana":"像溜溜球 yo-yo 掛在線上。","katakana":"像一個倒放的 E，喊 yo。"},"kanjiOrigin":{"hiragana":"與","katakana":"與"},"confusableKana":["ゆ","ま"],"sampleWord":{"word":"よる","reading":"yoru","meaning":"夜晚"}}
+        {"hiragana":"や","katakana":"ヤ","romaji":"ya","shapeMnemonic":{"hiragana":"像一艘小遊艇 yacht 揚起帆。","katakana":"像 Y 字分岔的道路；Y → ya。"},"kanjiOrigin":{"hiragana":"也","katakana":"也"},"confusableKana":["か"],"sampleWord":{"word":"やきにく","reading":"yakiniku","meaning":"燒肉"}},
+        {"hiragana":"ゆ","katakana":"ユ","romaji":"yu","shapeMnemonic":{"hiragana":"像魚被魚鉤悠著拉走，中間有大彎圈。","katakana":"像 U 字旁加一豎；U → yu。"},"kanjiOrigin":{"hiragana":"由","katakana":"由"},"confusableKana":["よ"],"sampleWord":{"word":"ゆかた","reading":"yukata","meaning":"浴衣"}},
+        {"hiragana":"よ","katakana":"ヨ","romaji":"yo","shapeMnemonic":{"hiragana":"像溜溜球 yo-yo 掛在線上。","katakana":"像一個倒放的 E，喊 yo。"},"kanjiOrigin":{"hiragana":"與","katakana":"與"},"confusableKana":["ゆ","ま"],"sampleWord":{"word":"ヨーグルト","reading":"yooguruto","meaning":"優格"}}
       ]
     },
     {
       "id":"r","label":"R 行","cards":[
-        {"hiragana":"ら","katakana":"ラ","romaji":"ra","shapeMnemonic":{"hiragana":"像一隻 rabbit 低頭跑，尾巴向右彎。","katakana":"像人在拉拉鍊，斜線往下拉。"},"kanjiOrigin":{"hiragana":"良","katakana":"良"},"confusableKana":["ち"],"sampleWord":{"word":"らいねん","reading":"rainen","meaning":"明年"}},
-        {"hiragana":"り","katakana":"リ","romaji":"ri","shapeMnemonic":{"hiragana":"兩條直線像兩人並肩『立』著，右筆更長。","katakana":"像一把利刃切下去；利 → ri。"},"kanjiOrigin":{"hiragana":"利","katakana":"利"},"confusableKana":["い"],"sampleWord":{"word":"りす","reading":"risu","meaning":"松鼠"}},
-        {"hiragana":"る","katakana":"ル","romaji":"ru","shapeMnemonic":{"hiragana":"像一條 looping 的路繞一圈，底部有小圈。","katakana":"兩筆像彎曲的 route；route → ru。"},"kanjiOrigin":{"hiragana":"留","katakana":"流"},"confusableKana":["ろ"],"sampleWord":{"word":"くるま","reading":"kuruma","meaning":"汽車"}},
-        {"hiragana":"れ","katakana":"レ","romaji":"re","shapeMnemonic":{"hiragana":"像繩子從柱子滑下，右側沒有封閉圈。","katakana":"像字母 L 加一撇；L 的音感提醒 re。"},"kanjiOrigin":{"hiragana":"禮","katakana":"禮"},"confusableKana":["ね","わ"],"sampleWord":{"word":"れきし","reading":"rekishi","meaning":"歷史"}},
-        {"hiragana":"ろ","katakana":"ロ","romaji":"ro","shapeMnemonic":{"hiragana":"像數字 3 躺著，底部沒有小圈。","katakana":"像一張方形嘴巴說 ro。"},"kanjiOrigin":{"hiragana":"呂","katakana":"呂"},"confusableKana":["る"],"sampleWord":{"word":"ろく","reading":"roku","meaning":"六"}}
+        {"hiragana":"ら","katakana":"ラ","romaji":"ra","shapeMnemonic":{"hiragana":"像一隻 rabbit 低頭跑，尾巴向右彎。","katakana":"像人在拉拉鍊，斜線往下拉。"},"kanjiOrigin":{"hiragana":"良","katakana":"良"},"confusableKana":["ち"],"sampleWord":{"word":"ラーメン","reading":"raamen","meaning":"拉麵"}},
+        {"hiragana":"り","katakana":"リ","romaji":"ri","shapeMnemonic":{"hiragana":"兩條直線像兩人並肩『立』著，右筆更長。","katakana":"像一把利刃切下去；利 → ri。"},"kanjiOrigin":{"hiragana":"利","katakana":"利"},"confusableKana":["い"],"sampleWord":{"word":"りんご","reading":"ringo","meaning":"蘋果"}},
+        {"hiragana":"る","katakana":"ル","romaji":"ru","shapeMnemonic":{"hiragana":"像一條 looping 的路繞一圈，底部有小圈。","katakana":"兩筆像彎曲的 route；route → ru。"},"kanjiOrigin":{"hiragana":"留","katakana":"流"},"confusableKana":["ろ"],"sampleWord":{"word":"ルール","reading":"ruuru","meaning":"規則"}},
+        {"hiragana":"れ","katakana":"レ","romaji":"re","shapeMnemonic":{"hiragana":"像繩子從柱子滑下，右側沒有封閉圈。","katakana":"像字母 L 加一撇；L 的音感提醒 re。"},"kanjiOrigin":{"hiragana":"禮","katakana":"禮"},"confusableKana":["ね","わ"],"sampleWord":{"word":"レストラン","reading":"resutoran","meaning":"餐廳"}},
+        {"hiragana":"ろ","katakana":"ロ","romaji":"ro","shapeMnemonic":{"hiragana":"像數字 3 躺著，底部沒有小圈。","katakana":"像一張方形嘴巴說 ro。"},"kanjiOrigin":{"hiragana":"呂","katakana":"呂"},"confusableKana":["る"],"sampleWord":{"word":"ロボット","reading":"robotto","meaning":"機器人"}}
       ]
     },
     {
       "id":"w","label":"W／N","cards":[
-        {"hiragana":"わ","katakana":"ワ","romaji":"wa","shapeMnemonic":{"hiragana":"像一個人彎腰說『哇！』，右邊甩出長尾。","katakana":"像水杯的一角，water → wa。"},"kanjiOrigin":{"hiragana":"和","katakana":"和"},"confusableKana":["れ"],"sampleWord":{"word":"わに","reading":"wani","meaning":"鱷魚"}},
+        {"hiragana":"わ","katakana":"ワ","romaji":"wa","shapeMnemonic":{"hiragana":"像一個人彎腰說『哇！』，右邊甩出長尾。","katakana":"像水杯的一角，water → wa。"},"kanjiOrigin":{"hiragana":"和","katakana":"和"},"confusableKana":["れ"],"sampleWord":{"word":"わさび","reading":"wasabi","meaning":"芥末"}},
         {"hiragana":"を","katakana":"ヲ","romaji":"wo / o","shapeMnemonic":{"hiragana":"像一條魚穿過圓環，繞過『喔』的圈。","katakana":"像ヲ被三條水平線切開；現代多讀作 o。"},"kanjiOrigin":{"hiragana":"遠","katakana":"乎"},"confusableKana":["お"],"sampleWord":{"word":"を","reading":"o","meaning":"受詞助詞"}},
         {"hiragana":"ん","katakana":"ン","romaji":"n","shapeMnemonic":{"hiragana":"像人在點頭回應『嗯』，尾巴往右上揚。","katakana":"一撇一點像快速寫下的 n，長筆往右上。"},"kanjiOrigin":{"hiragana":"无","katakana":"尓"},"confusableKana":["そ","ソ"],"sampleWord":{"word":"ほん","reading":"hon","meaning":"書"}}
       ]
