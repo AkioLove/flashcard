@@ -1,7 +1,9 @@
 const KANA_MNEMONICS={};
+let HIRAGANA_SAMPLE_OVERRIDES={};
 
 function normalizeMnemonicCard(card,rowId,index){
   const id=`${rowId}-${index}`;
+  const sampleWord=HIRAGANA_SAMPLE_OVERRIDES[id]||card.sampleWord||null;
   KANA_MNEMONICS[id]={
     hiragana:card.hiragana,
     katakana:card.katakana,
@@ -9,7 +11,7 @@ function normalizeMnemonicCard(card,rowId,index){
     shapeMnemonic:card.shapeMnemonic||{},
     kanjiOrigin:card.kanjiOrigin||{},
     confusableKana:Array.isArray(card.confusableKana)?card.confusableKana:[],
-    sampleWord:card.sampleWord||null
+    sampleWord
   };
   return [card.hiragana,card.katakana,card.romaji];
 }
@@ -61,12 +63,16 @@ function normalizeRows(data){
 
 const KANA_DATA_PROMISE=Promise.all([
   fetch('./data/mnemonics.json').then(response=>{if(!response.ok)throw new Error(`Failed to load kana data: ${response.status}`);return response.json()}),
-  fetch('./data/advanced-kana.json').then(response=>{if(!response.ok)throw new Error(`Failed to load advanced kana data: ${response.status}`);return response.json()})
+  fetch('./data/advanced-kana.json').then(response=>{if(!response.ok)throw new Error(`Failed to load advanced kana data: ${response.status}`);return response.json()}),
+  fetch('./data/hiragana-sample-overrides.json').then(response=>{if(!response.ok)throw new Error(`Failed to load hiragana samples: ${response.status}`);return response.json()})
 ])
-  .then(([basic,advanced])=>({
-    version:`${basic.version}.${advanced.version}`,
-    rows:[...normalizeRows(basic),...normalizeRows(advanced)]
-  }))
+  .then(([basic,advanced,overrides])=>{
+    HIRAGANA_SAMPLE_OVERRIDES=overrides.samples||{};
+    return {
+      version:`${basic.version}.${advanced.version}.${overrides.version}`,
+      rows:[...normalizeRows(basic),...normalizeRows(advanced)]
+    };
+  })
   .catch(error=>{
     console.error(error);
     return null;
